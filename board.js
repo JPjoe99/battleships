@@ -16,8 +16,8 @@ export function createBoard() {
 }
 
 function onClick(e) {
-    let x = Math.ceil((e.clientX - ((screen.width - clientWidth) / 2)) / (clientWidth / 10)) + 1;
-    let y = Math.ceil((e.clientY - ((screen.height - clientHeight) / 2)) / (clientHeight / 10)) + 1;
+    let x = Math.ceil((e.clientX - ((screen.width - clientWidth) / 2)) / (clientWidth / 10));
+    let y = Math.ceil((e.clientY - ((screen.height - clientHeight) / 2)) / (clientHeight / 10));
     // let x = Math.ceil((5 / screen.width) * (2 * e.clientX + clientWidth) - 5);
     // let y = Math.ceil((5 / screen.height) * (2 * e.clientY + clientHeight) - 5);
 
@@ -35,7 +35,7 @@ function onClick(e) {
             }
         }
         else {
-            alert(`Target hit! x: ${x}, y: ${y}`);
+            alert(`Target hit! x: ${x}, y: ${y}, screen.width: ${screen.width}, screen.height: ${screen.height}`);
             e.target.removeEventListener("click", onClick);
         }
         e.target.style.backgroundColor = "gray";
