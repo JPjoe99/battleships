@@ -16,31 +16,22 @@ export function createBoard() {
 }
 
 function onClick(e) {
-    console.log(innerWidth);
-    console.log(innerHeight);
     let x = Math.ceil((e.clientX - ((innerWidth - clientWidth) / 2)) / (clientWidth / 10));
     let y = Math.ceil((e.clientY - ((innerHeight - clientHeight) / 2)) / (clientHeight / 10));
-    // let x = Math.ceil((5 / screen.width) * (2 * e.clientX + clientWidth) - 5);
-    // let y = Math.ceil((5 / screen.height) * (2 * e.clientY + clientHeight) - 5);
-
-    console.log("x: " + x);
-    console.log("y: " + y);
-    console.log(e);
-    // console.log("x: " + Math.ceil((e.clientX - 326.5) / 33.9));
-    // console.log("y: " + Math.ceil(e.clientY / 33.9));
-    //console.log(e.clientHeight )
     if (e.target.textContent != "") {
         if (hitShipAndCheckIfSunk(e.target, x, y)) {
             alert("Target sunk!");
             if (checkIfAllShipsSunk(ships)) {
-               alert("WIN");
+               if (confirm("You won! Press OK to restart,")) {
+                   window.location("/");
+               }
             }
         }
         else {
-            alert(`Target hit! x: ${x}, y: ${y}, screen.width: ${innerWidth}, screen.height: ${innerHeight}`);
+            alert("Target hit!");
             e.target.removeEventListener("click", onClick);
         }
-        e.target.style.backgroundColor = "gray";
+        e.target.style.backgroundColor = "lightBlue";
     }
     else {
         alert("Target missed!");

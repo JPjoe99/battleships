@@ -22,7 +22,7 @@ html, body {
 }
 
 .square-inner {
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 .board-square:hover {
