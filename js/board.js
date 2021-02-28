@@ -21,17 +21,18 @@ function onClick(e) {
     if (e.target.textContent != "") {
         if (hitShipAndCheckIfSunk(e.target, x, y)) {
             alert("Target sunk!");
+            e.target.style.backgroundColor = "lightBlue";
             if (checkIfAllShipsSunk(ships)) {
                if (confirm("You won! Press OK to restart,")) {
-                   window.location("/");
+                   window.location.reload();
                }
             }
         }
         else {
             alert("Target hit!");
+            e.target.style.backgroundColor = "lightBlue";
             e.target.removeEventListener("click", onClick);
         }
-        e.target.style.backgroundColor = "lightBlue";
     }
     else {
         alert("Target missed!");
