@@ -1,6 +1,6 @@
-import { Square } from "./board-classes/Square";
-import { Ship } from "./ship-classes/Ship";
-import { ShipPiece } from "./ship-classes/ShipPiece"
+import { Square } from "../board-classes/Square";
+import { Ship } from "../ship-classes/Ship";
+import { ShipPiece } from "../ship-classes/ShipPiece"
 
 class Logic {
     private availableOrientations: Array<string>;

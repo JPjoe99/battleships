@@ -20,6 +20,9 @@ class Output {
             window.location.reload();
         }
     }
+    outputWelcome(): void {
+        alert("Welcome to Battleships! Aim: Sink the enemy's three ships")
+    }
 }
 
 export {Output};

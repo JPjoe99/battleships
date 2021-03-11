@@ -2,9 +2,9 @@ import { Board } from "./board-classes/Board";
 import { Ship } from "./ship-classes/Ship";
 import { Square } from "./board-classes/Square";
 import { ShipPiece } from "./ship-classes/ShipPiece";
-import { Output } from "./Output";
-import { Logic } from "./Logic";
-import { Draw } from "./Draw";
+import { Output } from "./utilities/Output";
+import { Logic } from "./utilities/Logic";
+import { Draw } from "./utilities/Draw";
 
 class Game {
     private board: Board;
@@ -27,6 +27,7 @@ class Game {
     };
 
     startGame(): void {
+        this.output.outputWelcome();
         this.logic.randomiseShipParameters(this.ships, this.board.getX(), this.board.getY());
         while (!this.logic.verifyValidPlacements(this.ships)) {
             this.logic.randomiseShipParameters(this.ships, this.board.getX(), this.board.getY());

@@ -1,7 +1,7 @@
-import { Board } from "./board-classes/Board";
-import { Square } from "./board-classes/Square";
-import { Ship } from "./ship-classes/Ship";
-import { ShipPiece } from "./ship-classes/ShipPiece";
+import { Board } from "../board-classes/Board";
+import { Square } from "../board-classes/Square";
+import { Ship } from "../ship-classes/Ship";
+import { ShipPiece } from "../ship-classes/ShipPiece";
 
 class Draw {
     constructor() {}
