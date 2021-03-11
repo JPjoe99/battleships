@@ -16,12 +16,12 @@ class Output {
         alert("HIT");
     }
     outputWin(): void {
-        if (confirm("You won! Press OK to restart,")) {
+        if (confirm("You won! Press OK to restart")) {
             window.location.reload();
         }
     }
     outputWelcome(): void {
-        alert("Welcome to Battleships! Aim: Sink the enemy's three ships")
+        alert(`Welcome to Battleships!\n\nAim: Sink the enemy's three ships\n\nSelect a square to make a move!`)
     }
 }
 
