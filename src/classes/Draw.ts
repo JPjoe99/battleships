@@ -20,9 +20,9 @@ class Draw {
         let square = document.createElement("div");
         square.className = "board-square";
         square.id = `${squareIn.getId()}`;
-        if (squareIn.getSquareContent() != null) {
-            square.textContent = "X";
-        }
+        // if (squareIn.getSquareContent() != null) {
+        //     square.textContent = "X";
+        // }
         return square;
     }
     highlightSquare(squareIn: Square): void {
