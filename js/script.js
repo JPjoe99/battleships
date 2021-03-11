@@ -1,5 +1,5 @@
-import {startGame} from "./game.js";
+// import {startGame} from "./game.js";
 
-startGame();
+// startGame();
 
 

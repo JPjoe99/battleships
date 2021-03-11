@@ -1,0 +1,26 @@
+{
+  "name": "battleships",
+  "version": "1.0.0",
+  "description": "[Click here](https://jpjoe99.github.io/battleships/)",
+  "main": "src/script.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JPjoe99/battleships.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JPjoe99/battleships/issues"
+  },
+  "homepage": "https://github.com/JPjoe99/battleships#readme",
+  "devDependencies": {
+    "ts-loader": "^8.0.17",
+    "typescript": "^4.2.3",
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0"
+  }
+}

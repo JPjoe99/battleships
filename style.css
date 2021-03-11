@@ -12,8 +12,8 @@ html, body {
     height: 100vmin;
     width: 100vmin;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    /* grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr); */
     background-color: white;
 }
 
